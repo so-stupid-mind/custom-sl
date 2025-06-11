@@ -9,7 +9,8 @@ self.addEventListener('install', (event) => {
 				'./',
 				'index.html',
 				'assets/index.67b4f464.js',
-				'static/cdn.tailwindcss.js',
+				'favicon-512x512.png',
+				'https://cdn.tailwindcss.com',
 				'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
 				'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2',
 			])
