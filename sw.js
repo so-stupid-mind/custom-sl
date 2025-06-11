@@ -2,9 +2,30 @@
 
 const CacheKey = 'CustomSL_Cache'
 
+const cacheList = [
+	'./',
+	'manifest.json',
+	'index.html',
+	'assets/index.67b4f464.js',
+	'favicon-512x512.png',
+	'static/cdn.tailwindcss.js',
+	'static/all.min.css',
+	'static/fa-solid-900.woff2',
+]
+
 self.addEventListener('install', (event) => {
 	event.waitUntil(
-		caches.open(CacheKey).then((cache) => {
+		caches.open(CacheKey).then(async (cache) => {
+			for( const item of cacheList ) {
+				try {
+					await cache.add(item)
+				} catch(e) {
+					console.error(e)
+				}
+			}
+			
+			return
+			
 			return cache.addAll([
 				'./',
 				'index.html',
