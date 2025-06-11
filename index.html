@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-full">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<title>Авто стробоскоп</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="favicon-512x512.png">
+    
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="manifest" href="manifest.json">
+	
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'glow': 'glow 1.5s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        glow: {
+                            '0%': { 'box-shadow': '0 0 5px #3b82f6, 0 0 10px #3b82f6' },
+                            '100%': { 'box-shadow': '0 0 15px #3b82f6, 0 0 30px #3b82f6' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+	
+    <style>
+        body {
+            overscroll-behavior: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .page-transition {
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease;
+        }
+        .floating-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .card-glow-on {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
+        }
+        .toggle-bg:before {
+            content: '';
+            position: absolute;
+            transition: 0.3s;
+        }
+        .flashing-border {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { border-color: #60a5fa; }
+            50% { border-color: #3b82f6; }
+            100% { border-color: #60a5fa; }
+        }
+    </style>
+  <script type="module" crossorigin src="assets/index.67b4f464.js"></script>
+</head>
+
+<body id="app" class="root-element dark:bg-gray-900 bg-gray-50 h-full flex flex-col text-gray-800 dark:text-gray-200 overflow-hidden">
+		
+	
+</body>
+</html>
